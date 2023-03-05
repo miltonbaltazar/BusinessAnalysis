@@ -1,0 +1,18 @@
+@startuml umlCusCompraOnline
+title "Compra en linea"
+left to right direction
+actor Usuario
+actor Administrador
+rectangle "Realizar una compra en línea" as (Compra) {
+  (Buscar producto)
+  (Agregar al carrito)
+  (Confirmar compra)
+  (Proporcionar información de envío y facturación)
+}
+(Compra) --> (Buscar producto)
+(Compra) --> (Agregar al carrito)
+(Compra) --> (Confirmar compra)
+(Compra) --> (Proporcionar información de envío y facturación)
+(Usuario) --> (Compra)
+(Administrador) --> (Compra)
+@enduml

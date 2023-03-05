@@ -1,0 +1,18 @@
+@startuml umlSeqCompraOnline
+title "Compra en linea"
+actor Usuario
+participant Sistema
+participant ProveedorPago
+
+User -> Sistema: Iniciar sesión
+User -> Sistema: Buscar producto
+User -> Sistema: Agregar al carrito
+User -> Sistema: Confirmar compra
+Sistema -> Sistema: Mostrar resumen de compra
+User -> Sistema: Proporcionar información de envío y facturación
+Sistema -> Sistema: Mostrar página de confirmación
+Sistema -> ProveedorPago: Redirigir a plataforma de pago
+ProveedorPago -> Sistema: Procesar transacción
+ProveedorPago -> Sistema: Redirigir a plataforma de comercio electrónico
+Sistema -> Sistema: Mostrar página de confirmación final
+@enduml

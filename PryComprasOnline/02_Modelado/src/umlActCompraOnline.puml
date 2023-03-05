@@ -1,0 +1,18 @@
+@startuml umlActCompraOnline
+title "Compra en linea"
+start
+:Iniciar sesión;
+if (¿Producto encontrado?) then (si)
+  :Agregar al carrito;
+else (no)
+  :Mostrar mensaje de error;
+endif
+:Confirmar compra;
+:Proporcionar información de envío y facturación;
+if (¿Pago procesado correctamente?) then (si)
+  :Mostrar página de confirmación final;
+else (no)
+  :Mostrar mensaje de error;
+endif
+stop
+@enduml
